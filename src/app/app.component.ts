@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
           alert(" device.kind.toString()  "+ JSON.stringify(device) )
             if (device.kind.toString() === 'videoinput') {
                 videoDevices.push(device);
-            }
+            } 
         }
         if (videoDevices.length > 0){
             let choosenDev;
