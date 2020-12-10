@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
             if (choosenDev) {
                 this.qrScannerComponent.chooseCamera.next(choosenDev);
             } else {
-                this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
+                this.qrScannerComponent.chooseCamera.next(videoDevices[1]);
             }
         }
     });
