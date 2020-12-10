@@ -23,6 +23,7 @@ export class AppComponent implements OnInit {
         console.log(devices);
         const videoDevices: MediaDeviceInfo[] = [];
         for (const device of devices) {
+          alert(" device.kind.toString()  "+ device.kind.toString() )
             if (device.kind.toString() === 'videoinput') {
                 videoDevices.push(device);
             }
@@ -30,15 +31,18 @@ export class AppComponent implements OnInit {
         if (videoDevices.length > 0){
             let choosenDev;
             for (const dev of videoDevices){
+              alert(dev+ " dev.label.  "+ dev.label)
                 if (dev.label.includes('front')){
                     choosenDev = dev;
                     break;
                 }
             }
             if (choosenDev) {
+              alert(1+ "---"+choosenDev )
                 this.qrScannerComponent.chooseCamera.next(choosenDev);
             } else {
-                this.qrScannerComponent.chooseCamera.next(videoDevices[1]);
+              alert(2 + "---"+ videoDevices[0])
+                this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
             }
         }
     });
