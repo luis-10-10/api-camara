@@ -23,7 +23,7 @@ export class AppComponent implements OnInit {
         console.log(devices);
         const videoDevices: MediaDeviceInfo[] = [];
         for (const device of devices) {
-          alert(" device.kind.toString()  "+ device.kind.toString() )
+          alert(" device.kind.toString()  "+ JSON.stringify(device) )
             if (device.kind.toString() === 'videoinput') {
                 videoDevices.push(device);
             }
@@ -37,9 +37,13 @@ export class AppComponent implements OnInit {
                     break;
                 }
             }
+            alert(0 + "---"+
+                  JSON.stringify(choosenDev)  +"---"+ 
+                  JSON.stringify(videoDevices[0]) +"--"+ 
+                  JSON.stringify(videoDevices[1]))
             if (choosenDev) {
-              alert(1+ "---"+choosenDev )
-                this.qrScannerComponent.chooseCamera.next(choosenDev);
+              alert(1+ "---"+JSON.stringify(choosenDev) )
+                this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
             } else {
               alert(2 + "---"+ JSON.stringify(videoDevices[0]) +"--"+ JSON.stringify(videoDevices[2]))
                 this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
