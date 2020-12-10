@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "leer-codigo-qr": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "leer-codigo-qr"
+    }
+  },
+  "defaultProject": "leer-codigo-qr",
+  "cli": {
+    "analytics": "c2b64ed0-3800-40cf-86b0-2e1b9c1e6ccd"
+  }
 }

@@ -3,6 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+//import { NgQrScannerModule } from 'angular2-qrscanner';
+
+//import { NgQRCodeReaderModule } from 'ng2-qrcode-reader';  
+// Scanner
+import { NgQrScannerModule } from 'angular2-qrscanner';
 
 @NgModule({
   declarations: [
@@ -10,7 +15,8 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgQrScannerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
