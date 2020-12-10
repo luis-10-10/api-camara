@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod --baseHref=https://luis-10-10.github.io/api-camara/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
