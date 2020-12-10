@@ -31,7 +31,7 @@ export class AppComponent implements OnInit {
         if (videoDevices.length > 0){
             let choosenDev;
             for (const dev of videoDevices){
-              alert(dev+ " dev.label.  "+ dev.label)
+              alert(dev+ " dev.label.  "+ dev.label) 
                 if (dev.label.includes('front')){
                     choosenDev = dev;
                     break;
