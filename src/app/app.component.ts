@@ -32,18 +32,15 @@ export class AppComponent implements OnInit {
             let choosenDev;
             for (const dev of videoDevices){
               alert(dev+ " dev.label.  "+ dev.label) 
-                if (dev.label.includes('front')){
+                if (dev.label.includes('back')){
                     choosenDev = dev;
-                  //  break;
+                   break;
                 }
             }
-            alert(0 + "---"+
-                  JSON.stringify(choosenDev)  +"---"+ 
-                  JSON.stringify(videoDevices[0]) +"--"+ 
-                  JSON.stringify(videoDevices[1]))
+            alert(0 + "---"+    JSON.stringify(choosenDev))
             if (choosenDev) {
               alert(1+ "---"+JSON.stringify(choosenDev) )
-                this.qrScannerComponent.chooseCamera.next(videoDevices[1]);
+                this.qrScannerComponent.chooseCamera.next(choosenDev);
             } else {
               alert(2 + "---"+ JSON.stringify(videoDevices[0]) +"--"+ JSON.stringify(videoDevices[2]))
                 this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
