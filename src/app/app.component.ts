@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
               alert(1+ "---"+choosenDev )
                 this.qrScannerComponent.chooseCamera.next(choosenDev);
             } else {
-              alert(2 + "---"+ videoDevices[0])
+              alert(2 + "---"+ JSON.stringify(videoDevices[0]) +"--"+ JSON.stringify(videoDevices[2]))
                 this.qrScannerComponent.chooseCamera.next(videoDevices[0]);
             }
         }
